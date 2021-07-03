@@ -1,0 +1,4 @@
+kill port
+----------
+netstat -aon | findstr {port number}
+taskkill /f /pid {pid number}
