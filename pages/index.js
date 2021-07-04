@@ -1,7 +1,5 @@
 export default function Home() {
   return (
-    <>
-      <h1 class="px-10 py-10 bg-gray-50 font-bold">Hello World!!!</h1>
-    </>
+      <h1 className="m-auto">Some content Here</h1>
   )
 }
