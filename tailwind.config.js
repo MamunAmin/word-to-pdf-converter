@@ -9,6 +9,9 @@ module.exports = {
         belgrano: ['Belgrano'],
         K2D: ['K2D'],
         amethysta: ['Amethysta']
+      },
+      boxShadow: {
+        boxShadow : '0 4px 8px  #00000030, 0 6px 20px #00000030',
       }
     },
   },
