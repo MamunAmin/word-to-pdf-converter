@@ -1,4 +1,4 @@
-const Heading = () => {
+const Subheading = () => {
     
     return (
         <div className="flex flex-row justify-center mt-14">
@@ -9,4 +9,4 @@ const Heading = () => {
     );
 };
 
-export default Heading;
+export default Subheading;

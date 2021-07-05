@@ -11,6 +11,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="keywords" content="word to pdf, convert, online, free" />
       </Head>
       <Heading/>
+      <Subheading/>
       <Component {...pageProps} />
     </>
   ) 
