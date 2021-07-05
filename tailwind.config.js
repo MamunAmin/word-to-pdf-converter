@@ -12,6 +12,9 @@ module.exports = {
       },
       boxShadow: {
         boxShadow : '0 4px 8px  #00000030, 0 6px 20px #00000030',
+      },
+      borderWidth: {
+        '3': '3px',
       }
     },
   },
