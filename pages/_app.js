@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import { Heading } from '../components'
+import { Subheading } from '../components'
+import { Footer } from '../components'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
@@ -13,6 +15,7 @@ function MyApp({ Component, pageProps }) {
       <Heading/>
       <Subheading/>
       <Component {...pageProps} />
+      <Footer/>
     </>
   ) 
 }
