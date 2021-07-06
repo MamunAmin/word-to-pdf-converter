@@ -4,8 +4,8 @@ import { Download } from '../components'
 export default function Home() {
   return (
     /*
-      <DragNDrop/>
-      */
-   <Download/>
+    <Download/>
+    */
+     <DragNDrop/>
   )
 }
