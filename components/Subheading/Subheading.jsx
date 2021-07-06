@@ -1,4 +1,4 @@
-const Footer = () => {
+const Subheading = () => {
     
     return (
         <div className="flex flex-row justify-center mt-5">
@@ -7,4 +7,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default Subheading;
