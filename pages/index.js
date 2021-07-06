@@ -1,11 +1,7 @@
-import { DragNDrop } from '../components' 
-import { Download } from '../components' 
+import { DragNDrop } from '../components'
 
 export default function Home() {
   return (
-    <Download/>
-    /*
     <DragNDrop/>
-    */
   )
 }
