@@ -9,17 +9,24 @@ const DragNDrop = () => {
     const file = new FormData()
     file.append('file', File);
     //const URL = "https://v2.convertapi.com/convert/docx/to/pdf?Secret=5YhXCnqpE2XVFGjR&StoreFile=true"
-    const URL = "http://ec2-18-189-185-84.us-east-2.compute.amazonaws.com:8080/api/pdfConvert"
+    //const URL = "http://ec2-18-189-185-84.us-east-2.compute.amazonaws.com:8080/api/pdfConvert"
+    const URL = "http://ec2-18-117-168-5.us-east-2.compute.amazonaws.com:8080/api/pdfConvert"
     fetch(URL, {
       method: 'POST',
       body: file
     }).then(
       response => response.formData()
-    ).then(
-      success => console.log(success, "hiii")
-    ).catch(
-      error => console.log(error, "jjjjjj")
-    );
+      ).then(
+        success => console.log(success, "hiii")
+        ).catch(
+          error => console.log(error, "jjjjjj")
+          );
+          /*
+    //fetch('http://ec2-18-189-185-84.us-east-2.compute.amazonaws.com:8080/api/test')
+    fetch('http://ec2-18-117-168-5.us-east-2.compute.amazonaws.com:8080/api/test')
+    .then(response => response.json())
+    */
+    
 
   };
 
