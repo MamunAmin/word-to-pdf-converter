@@ -16,17 +16,22 @@ const DragNDrop = () => {
       body: file
     }).then(
       response => response.formData()
-      ).then(
-        success => console.log(success, "hiii")
-        ).catch(
-          error => console.log(error, "jjjjjj")
-          );
-          /*
-    //fetch('http://ec2-18-189-185-84.us-east-2.compute.amazonaws.com:8080/api/test')
-    fetch('http://ec2-18-117-168-5.us-east-2.compute.amazonaws.com:8080/api/test')
-    .then(response => response.json())
-    */
-    
+    ).then(
+      success => console.log(success, "hiii")
+    ).catch(
+      error => console.log(error, "jjjjjj")
+    );
+    /*
+ 
+//fetch('http://ec2-18-189-185-84.us-east-2.compute.amazonaws.com:8080/api/test')
+fetch('http://ec2-18-117-168-5.us-east-2.compute.amazonaws.com:8080/api/test')
+.then(response => response.json())
+.then(
+success => console.log(success, "hiii")
+).catch(
+  error => console.log(error)
+  );
+  */
 
   };
 
