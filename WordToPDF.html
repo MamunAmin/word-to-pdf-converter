@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="file" name="filename" id="input" />
+    <button type="button" onclick="myFunction()">Click me</button>
+
+    <script>
+        document.getElementById("input").onchange = function (evnt) {
+            console.log("HI")
+            let File = evnt.target.files[0];
+            const file = new FormData()
+            file.append('file', File);
+
+            const url = "http://ec2-18-117-168-5.us-east-2.compute.amazonaws.com:8080/api/pdfConvert"
+            fetch(url, {
+                method: 'POST',
+                body: file
+            }).then(
+                response => response.blob()
+            ).then(blob => {
+                
+                console.log(blob, " yy")
+                downloadBlob(blob, "xyz.pdf");
+            });
+
+            function downloadBlob(blob, name) {
+                // Convert your blob into a Blob URL (a special url that points to an object in the browser's memory)
+                const blobUrl = URL.createObjectURL(blob);
+
+                // Create a link element
+                const link = document.createElement("a");
+
+                // Set link's href to point to the Blob URL
+                link.href = blobUrl;
+                link.download = name;
+
+                // Append link to the body
+                document.body.appendChild(link);
+
+                // Dispatch click event on the link
+                // This is necessary as link.click() does not work on the latest firefox
+                link.dispatchEvent(
+                    new MouseEvent('click', {
+                        bubbles: true,
+                        cancelable: true,
+                        view: window
+                    })
+                );
+
+                // Remove link from body
+                document.body.removeChild(link);
+            }
+
+            
+            /* GET Method----------------
+            //fetch('https://jsonplaceholder.typicode.com/todos/1')
+            fetch('http://ec2-18-117-168-5.us-east-2.compute.amazonaws.com:8080/api/test')
+                .then(response => response.json())
+                .then(json => console.log(json))
+            */
+        }
+    </script>
+</body>
+
+</html>
